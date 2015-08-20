@@ -44,14 +44,14 @@ textarea {
 	width: 100%;
 	font-size: 14px;
 	position: relative;
+	cursor: pointer;
 }
-.name {	
-	top: -2px;
-	height: 45px;
-	padding-left: 36px;	
-}
-.imgBox {
+.inputBox {
 	position: relative;
+	input {
+		height: 45px;
+		padding-left: 36px;	
+	}
 	img {
 		height: 24px;
 		position: absolute;
@@ -60,4 +60,39 @@ textarea {
 		z-index: 1;
 		opacity: 0.4;
 	}
+}
+.name {	
+	top: -2px;
+	margin-bottom: 21px;
+}
+.email {
+	top: -1px;
+	margin-bottom: 21px;
+}
+.agree {
+	font-size: 12px;
+	input {
+		width: 20px;
+		height: 20px;
+		top: 0;
+		left: 0;
+		position: absolute;
+		&:checked {
+			
+		}
+	}
+	label {
+		padding-left: 28px;
+		display: inline-block;
+		position: relative;
+	}
+}
+.checkboxImg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-image: url('../images/checkbox.png');
 }
