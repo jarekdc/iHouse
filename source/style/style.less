@@ -1,0 +1,63 @@
+@import "reset.less";
+
+@gradA: #1a2980;
+@gradB: #26d0ce;
+
+@font-face {
+	font-family: 'EncodeSans-Light';
+	src: url('../font/EncodeSans-Light.ttf');
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'EncodeSans-Light', 'sans-serif';	
+}
+body {
+	background: linear-gradient(135deg, @gradA 0%, @gradB 100%);
+}
+.wrap {
+	margin: 0 auto;
+	width: 300px;
+}
+header {
+	height: 60px;
+	margin: 54px 0 2px;
+	background: linear-gradient(135deg, @gradA 0%, @gradB 100%);
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+}
+section {
+	background-color: #fff;
+	padding: 10px;
+}
+textarea {
+	resize: none;
+	min-height: 120px;
+	color: #1e1e1e;
+	line-height: 20px;
+	padding: 8px 7px; 
+}
+.inputs {
+	border: 1px solid #cccccc;
+	width: 100%;
+	font-size: 14px;
+	position: relative;
+}
+.name {	
+	top: -2px;
+	height: 45px;
+	padding-left: 36px;	
+}
+.imgBox {
+	position: relative;
+	img {
+		height: 24px;
+		position: absolute;
+		top: 9px;
+		left: 6px;
+		z-index: 1;
+		opacity: 0.4;
+	}
+}
