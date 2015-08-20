@@ -10,10 +10,12 @@ html
 	body
 		.wrap
 			header 
-				span Skontaktuj się z agentem
+				h1 Skontaktuj się z agentem
 
 			section
-				textarea.inputs Dzień dobry, Jestem zainteresowany współpracą z Panem. Proszę o kontakt.
+				textarea.inputs 
+					| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
+					| &#13;&#10;Proszę o kontakt.
 				 
 				.inputBox
 					img src='images/name.png'
@@ -34,4 +36,9 @@ html
 						| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
 						a href='regulamin' target='_blank'regulaminem
 						| .
-		
+
+				.sendMsg
+					button Wyślij wiadomość		
+					p 
+						| *Agent deklaruje, że odpowie w ciągu 
+						span 2 godzin
