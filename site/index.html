@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="style/style.css" rel="stylesheet" type="text/css" />
-    <script src="scripts/script.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -15,27 +14,29 @@
         </h1>
       </div>
       <section>
-        <textarea class="inputs mainTxt">Dzień dobry, Jestem zainteresowany współpracą z Panem. &#13;&#10;Proszę o kontakt.</textarea>
-        <div class="inputBox">
-          <img src="images/name.png" /><input class="inputs name" placeholder="Twoje imię" type="text" />
-        </div>
-        <div class="inputBox">
-          <img src="images/phone.png" /><input class="inputs" placeholder="Twój numer telefonu" type="text" />
-        </div>
-        <div class="inputBox">
-          <img src="images/at.png" /><input class="inputs email" placeholder="Twój adres e-mail" type="text" />
-        </div>
-        <div class="agree">
-          <label><input type="checkbox" />
-            <div class="checkboxImg"></div>
-            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="regulamin" target="_blank">regulaminem</a>.</label>
-        </div>
-        <div class="sendMsg">
-          <button>Wyślij wiadomość		</button>
-          <p>
-            *Agent deklaruje, że odpowie w ciągu <span>2 godzin</span>.
-          </p>
-        </div>
+        <form>
+          <textarea class="inputs mainTxt">Dzień dobry, Jestem zainteresowany współpracą z Panem. &#13;&#10;Proszę o kontakt.</textarea>
+          <div class="inputBox">
+            <img src="images/name.png" /><input class="inputs name" placeholder="Twoje imię" type="text" />
+          </div>
+          <div class="inputBox">
+            <img src="images/phone.png" /><input class="inputs" placeholder="Twój numer telefonu" type="text" />
+          </div>
+          <div class="inputBox">
+            <img src="images/at.png" /><input class="inputs email" placeholder="Twój adres e-mail" type="email" />
+          </div>
+          <div class="agree">
+            <label><input type="checkbox" />
+              <div class="checkboxImg"></div>
+              Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="regulamin" target="_blank">regulaminem</a>.</label>
+          </div>
+          <div class="sendMsg">
+            <button tpe="submit">Wyślij wiadomość		</button>
+            <p>
+              *Agent deklaruje, że odpowie w ciągu <span>2 godzin</span>.
+            </p>
+          </div>
+        </form>
       </section>
       <article class="dataInfo">
         <p>

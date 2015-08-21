@@ -1,9 +1,5 @@
 @import "reset.less";
-
-@gradA: #1a2980;
-@gradB: #26d0ce;
-@button: #73c947;
-@link: #3fa6e2;
+@import "colors.less";
 
 @font-face {
 	font-family: 'EncodeSans-Light';
@@ -18,6 +14,12 @@ body {
 	background: linear-gradient(135deg, @gradA 0%, @gradB 100%);
 	background-repeat: no-repeat;
 	padding-bottom: 100px;
+	color: @contrast;
+}
+h1 {
+	font-size: 18px;
+    font-style: normal;
+   	font-weight: 300;
 }
 .wrap {
 	margin: 0 auto;
@@ -31,25 +33,20 @@ body {
 .contact {	
 	margin: 54px 0 2px;
 	background: linear-gradient(135deg, @gradA 0%, @gradB 100%);
-	color: #fff;
-	h1 {
-		font-size: 18px;
-    	font-style: normal;
-    	font-weight: 300;
-	}
+	color: @base;
 }
 section {
-	background-color: #fff;
+	background-color: @base;
 	padding: 10px;
 	margin-bottom: 2px;
 }
 .mainTxt {
 	resize: none;
-	min-height: 120px;
-	color: #1e1e1e;
+	height: 120px;
+	color: @mainTxt;
 	line-height: 20px;
-	padding: 8px 7px;
-	border: 1px solid #ccc;
+	padding: 7px;
+	border: 1px solid @border;
 	border-bottom: 0px;
 }
 .inputs {
@@ -63,7 +60,7 @@ section {
 	input {
 		height: 45px;
 		padding-left: 36px;
-		border: 1px solid #ccc;	
+		border: 1px solid @border;	
 	}
 	img {
 		height: 24px;
@@ -71,11 +68,10 @@ section {
 		top: 9px;
 		left: 6px;
 		z-index: 1;
-		opacity: 0.15;
+		opacity: 0.1;
 	}
 }
 .name {	
-	top: -2px;
 	margin-bottom: 21px;
 }
 .email {
@@ -137,15 +133,15 @@ section {
 		font-size: 14px;
 		font-weight: 400;
 		border: none;
-		border-bottom: 1px solid #339999;
+		border-bottom: 1px solid @msgBorder;
 		box-shadow: 0px 2px 3px -3px rgba(0,0,0,1);
-		background-color: @button;
-		color: #fff;
+		background-color: @msgButton;
+		color: @base;
 		height: 45px;		
 		width: 100%;
 		cursor: pointer;
 		&:hover {
-			background-color: #69c139;
+			background-color: @msgHover;
 		}
 	}
 	p {
@@ -157,7 +153,7 @@ section {
 	}
 }
 .dataInfo {
-	background-color: #fff;
+	background-color: @base;
 	font-size: 10px;
 	padding: 10px 23px;
 	margin-bottom: 20px;
@@ -174,14 +170,12 @@ section {
 	}
 }
 .phone {
-	background-color: #fff;
+	background-color: @base;
 	position: relative;
 	margin-bottom: 2px;
 	text-align: left;
 	padding-left: 90px;
 	h1 {
-		font-size: 18px;
-    	font-style: normal;
     	font-weight: 600;
 	}
 	img {
@@ -194,13 +188,13 @@ section {
 	}
 }
 .phoneNr {
-	background-color: #fff;
+	background-color: @base;
 	padding: 7px 9px;
 	line-height: normal;
 	button {	
 		width: 100%;
-		background-color: #f5f6fa;
-		border: 1px solid #edeff5;
+		background-color: @phoneButton;
+		border: 1px solid @phoneBorder;
 		box-shadow: 0px 2px 3px -3px rgba(0,0,0,1);
 		padding: 0;
 		height: 100%;
@@ -209,7 +203,7 @@ section {
 		border-radius: 5px;
 		cursor: pointer;
 		&:hover {
-			background-color: #edeff5;
+			background-color: @phoneBorder;
 		}
 	}
 }

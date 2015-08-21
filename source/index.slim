@@ -5,7 +5,6 @@ html
 		meta charset='UTF-8'
 		meta name="viewport" content="width=device-width, initial-scale=1"
 		link href='style/style.css' type='text/css' rel='stylesheet'
-		script src='scripts/script.js'
 
 	body
 		.wrap
@@ -13,36 +12,37 @@ html
 				h1 Skontaktuj się z agentem
 
 			section
-				textarea.inputs.mainTxt 
-					| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
-					| &#13;&#10;Proszę o kontakt.
-				 
-				.inputBox
-					img src='images/name.png'
-					input.inputs.name type='text' placeholder='Twoje imię'
+				form
+					textarea.inputs.mainTxt 
+						| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
+						| &#13;&#10;Proszę o kontakt.
+					 
+					.inputBox
+						img src='images/name.png'
+						input.inputs.name type='text' placeholder='Twoje imię'
 
-				.inputBox
-					img src='images/phone.png'
-					input.inputs type='text' placeholder='Twój numer telefonu'	
-				
-				.inputBox
-					img src='images/at.png'
-					input.inputs.email type='text' placeholder='Twój adres e-mail'
+					.inputBox
+						img src='images/phone.png'
+						input.inputs type='text' placeholder='Twój numer telefonu'	
+					
+					.inputBox
+						img src='images/at.png'
+						input.inputs.email type='email' placeholder='Twój adres e-mail'
 
-				.agree
-					label 
-						input type='checkbox'
-						.checkboxImg
-						| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
-						a href='regulamin' target='_blank' regulaminem
-						| .
+					.agree
+						label 
+							input type='checkbox'
+							.checkboxImg
+							| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
+							a href='regulamin' target='_blank' regulaminem
+							| .
 
-				.sendMsg
-					button Wyślij wiadomość		
-					p 
-						| *Agent deklaruje, że odpowie w ciągu 
-						span 2 godzin
-						| .
+					.sendMsg
+						button tpe='submit' Wyślij wiadomość		
+						p 
+							| *Agent deklaruje, że odpowie w ciągu 
+							span 2 godzin
+							| .
 
 			article.dataInfo 
 				p 
