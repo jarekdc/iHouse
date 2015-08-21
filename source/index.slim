@@ -1,18 +1,20 @@
 doctype html
-html
+html ng-app='iHouseApp'
 	head
 		title iHouse
 		meta charset='UTF-8'
 		meta name="viewport" content="width=device-width, initial-scale=1"
 		link href='style/style.css' type='text/css' rel='stylesheet'
+		script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'
+		script src='scripts/app.js'
 
-	body
+	body ng-controller='contactCtrl'
 		.wrap
 			.box.contact 
-				h1 Skontaktuj się z agentem
+				h1 Skontaktuj się z agentem 
 
 			section
-				form
+				form novalidate=''
 					textarea.inputs.mainTxt 
 						| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
 						| &#13;&#10;Proszę o kontakt.
@@ -20,7 +22,7 @@ html
 					.inputBox
 						img src='images/name.png'
 						input.inputs.name type='text' placeholder='Twoje imię'
-
+						
 					.inputBox
 						img src='images/phone.png'
 						input.inputs type='text' placeholder='Twój numer telefonu'	
@@ -35,7 +37,7 @@ html
 							.checkboxImg
 							| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
 							a href='regulamin' target='_blank' regulaminem
-							| .
+							| .  
 
 					.sendMsg
 						button tpe='submit' Wyślij wiadomość		
@@ -55,4 +57,5 @@ html
 				img src='images/phone2.png'
 
 			.box.phoneNr
-				button Zobacz numer telefonu		
+				button ng-click='hideNr = !hideNr' ng-show='hideNr' Zobacz numer telefonu
+				h1 ng-hide='hideNr' ng-cloak='' +48 600 540 600		

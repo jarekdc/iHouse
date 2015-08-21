@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="iHouseApp">
   <head>
     <title>iHouse</title>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
   </head>
-  <body>
+  <body ng-controller="contactCtrl">
     <div class="wrap">
       <div class="box contact">
         <h1>
-          Skontaktuj się z agentem
+          Skontaktuj się z agentem 
         </h1>
       </div>
       <section>
-        <form>
+        <form novalidate="">
           <textarea class="inputs mainTxt">Dzień dobry, Jestem zainteresowany współpracą z Panem. &#13;&#10;Proszę o kontakt.</textarea>
           <div class="inputBox">
             <img src="images/name.png" /><input class="inputs name" placeholder="Twoje imię" type="text" />
@@ -28,7 +30,7 @@
           <div class="agree">
             <label><input type="checkbox" />
               <div class="checkboxImg"></div>
-              Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="regulamin" target="_blank">regulaminem</a>.</label>
+              Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="regulamin" target="_blank">regulaminem</a>.  </label>
           </div>
           <div class="sendMsg">
             <button tpe="submit">Wyślij wiadomość		</button>
@@ -51,7 +53,10 @@
         <img src="images/phone2.png" />
       </div>
       <div class="box phoneNr">
-        <button>Zobacz numer telefonu		</button>
+        <button ng-click="hideNr = !hideNr" ng-show="hideNr">Zobacz numer telefonu</button>
+        <h1 ng-cloak="" ng-hide="hideNr">
+          +48 600 540 600		
+        </h1>
       </div>
     </div>
   </body>
