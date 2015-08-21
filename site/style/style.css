@@ -289,16 +289,21 @@ section {
   padding: 10px 23px;
   margin-bottom: 20px;
 }
-.dataInfo p {
+.dataInfo span {
+  float: right;
+  color: #3fa6e2;
+}
+.hideInfo {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
   width: 191px;
 }
-.dataInfo span {
-  float: right;
-  color: #3fa6e2;
+.showInfo {
+  white-space: normal;
+  width: 100%;
+  text-align: justify;
 }
 .phone {
   background-color: #ffffff;
@@ -341,4 +346,7 @@ section {
 .phoneNr h1 {
   font-weight: 600;
   padding-top: 11px;
+}
+.clearfix {
+  clear: both;
 }

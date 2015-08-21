@@ -41,10 +41,11 @@
         </form>
       </section>
       <article class="dataInfo">
-        <p>
-          Administratorem danych osobowych jest tratratratatratratratatratratratatratratratatratratratatratratratatratratratatratratrata
+        <p class="hideInfo" ng-class="hide ? &#39;hideInfo&#39; : &#39;showInfo&#39;">
+          Administratorem danych osobowych jest Lorem ipsum dolor sit amet, offendit forensibus qui at, in autem invidunt tincidunt cum. Usu eu sumo numquam noluisse. Cu eos discere aliquam debitis, et sea quando consul salutatus, id usu tota percipit probatus. Vis atomorum platonem ut, amet malorum perfecto has ut, saepe commodo qui et. Civibus placerat vix ad. 
         </p>
-        <span>[czytaj więcej]</span>
+        <span ng-click="hideInfo()" ng-cloak="">[{{ hideOption }}]</span>
+        <div class="clearfix"></div>
       </article>
       <div class="box phone">
         <h1>
