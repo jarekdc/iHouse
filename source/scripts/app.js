@@ -7,7 +7,6 @@ app.controller('contactCtrl', ['$scope', function($scope){
 	};
 
 	$scope.submit = function() {
-		$scope.submitted = true;
 		alert($scope.user.message);
 	};	
 

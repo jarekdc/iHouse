@@ -1,5 +1,5 @@
 section
-	form name='userForm' novalidate='' ng-submit=' userForm.$valid && submit()'
+	form name='userForm' novalidate='' ng-submit='submitted = true;userForm.$valid && submit()'
 		textarea.inputs.mainTxt ng-model='user.message'
 		 
 		.inputBox 

@@ -1,5 +1,5 @@
 <section>
-  <form name="userForm" ng-submit=" userForm.$valid &amp;&amp; submit()" novalidate="">
+  <form name="userForm" ng-submit="submitted = true;userForm.$valid &amp;&amp; submit()" novalidate="">
     <textarea class="inputs mainTxt" ng-model="user.message"></textarea>
     <div class="inputBox">
       <img src="images/name.png" /><input class="inputs name" name="userName" ng-class="{inputError : (userForm.userName.$touched || submitted) &amp;&amp; userForm.userName.$invalid}" ng-model="user.name" ng-pattern="/^[a-zA-z][^0-9]{1,}$/" placeholder="Twoje imię" required="" type="text" />
