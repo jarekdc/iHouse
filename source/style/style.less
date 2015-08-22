@@ -60,7 +60,10 @@ section {
 	input {
 		height: 45px;
 		padding-left: 36px;
-		border: 1px solid @border;	
+		border: 1px solid @border;
+		&.myFocus {
+			border-color: @focused;
+		}	
 	}
 	img {
 		height: 24px;
@@ -125,7 +128,6 @@ section {
 	top: 3px;
 	left: 0;
 	cursor: pointer;
-	background-image: url('../images/checkbox.png');
 }
 .sendMsg {	
 	button {

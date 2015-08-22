@@ -1,0 +1,32 @@
+section
+	form novalidate=''
+		textarea.inputs.mainTxt ng-model='user.message'
+			| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
+			| &#13;&#10;Proszę o kontakt.
+		 
+		.inputBox
+			img src='images/name.png' 
+			input.inputs.name type='text' placeholder='Twoje imię' ng-model='user.name' ng-focus='focus=true' ng-blur="focus=false" ng-class="{myFocus: focus}" 
+			
+		.inputBox
+			img src='images/phone.png' 
+			input.inputs type='text' placeholder='Twój numer telefonu' ng-model='user.phone'	
+		
+		.inputBox
+			img src='images/at.png' 
+			input.inputs.email type='email' placeholder='Twój adres e-mail' ng-model='user.mail'
+
+		.agree
+			label 
+				input type='checkbox' ng-model='user.agree'
+				img.checkboxImg ng-src="{{user.agree ? 'images/checked.png' : 'images/checkbox.png'}}"
+				| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
+				a href='regulamin' target='_blank' regulaminem
+				| .  
+
+		.sendMsg
+			button tpe='submit' Wyślij wiadomość		
+			p 
+				| *Agent deklaruje, że odpowie w ciągu 
+				span 2 godzin
+				| .

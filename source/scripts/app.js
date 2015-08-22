@@ -15,3 +15,11 @@ app.controller('contactCtrl', ['$scope', function($scope){
 
 	$scope.hideNr = true;
 }]);
+
+app.directive('contactForm', function() {
+	return {
+		restrict: 'E',
+		replace: false,
+		templateUrl: 'templates/contactForm.html'
+	};
+});

@@ -198,6 +198,9 @@ section {
   padding-left: 36px;
   border: 1px solid #cccccc;
 }
+.inputBox input.myFocus {
+  border-color: #00cc66;
+}
 .inputBox img {
   height: 24px;
   position: absolute;
@@ -258,7 +261,6 @@ section {
   top: 3px;
   left: 0;
   cursor: pointer;
-  background-image: url('../images/checkbox.png');
 }
 .sendMsg button {
   border-radius: 5px;

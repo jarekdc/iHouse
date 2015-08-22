@@ -1,0 +1,23 @@
+<section>
+  <form novalidate="">
+    <textarea class="inputs mainTxt" ng-model="user.message">Dzień dobry, Jestem zainteresowany współpracą z Panem. &#13;&#10;Proszę o kontakt.</textarea>
+    <div class="inputBox">
+      <img src="images/name.png" /><input class="inputs name" ng-blur="focus=false" ng-class="{myFocus: focus}" ng-focus="focus=true" ng-model="user.name" placeholder="Twoje imię" type="text" />
+    </div>
+    <div class="inputBox">
+      <img src="images/phone.png" /><input class="inputs" ng-model="user.phone" placeholder="Twój numer telefonu" type="text" />
+    </div>
+    <div class="inputBox">
+      <img src="images/at.png" /><input class="inputs email" ng-model="user.mail" placeholder="Twój adres e-mail" type="email" />
+    </div>
+    <div class="agree">
+      <label><input ng-model="user.agree" type="checkbox" /><img class="checkboxImg" ng-src="{{user.agree ? &#39;images/checked.png&#39; : &#39;images/checkbox.png&#39;}}" />Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="regulamin" target="_blank">regulaminem</a>.  </label>
+    </div>
+    <div class="sendMsg">
+      <button tpe="submit">Wyślij wiadomość		</button>
+      <p>
+        *Agent deklaruje, że odpowie w ciągu <span>2 godzin</span>.
+      </p>
+    </div>
+  </form>
+</section>
