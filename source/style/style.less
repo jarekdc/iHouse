@@ -47,7 +47,10 @@ section {
 	line-height: 20px;
 	padding: 7px;
 	border: 1px solid @border;
-	border-bottom: 0px;
+	&:focus {
+		border: 1px solid @focused;
+		z-index: 1;
+	}	
 }
 .inputs {
 	width: 100%;
@@ -61,8 +64,9 @@ section {
 		height: 45px;
 		padding-left: 36px;
 		border: 1px solid @border;
-		&.myFocus {
-			border-color: @focused;
+		&:focus {
+			border: 1px solid @focused;
+			z-index: 1;
 		}	
 	}
 	img {
@@ -70,12 +74,13 @@ section {
 		position: absolute;
 		top: 9px;
 		left: 6px;
-		z-index: 1;
+		z-index: 10;
 		opacity: 0.1;
 	}
 }
 .name {	
 	margin-bottom: 21px;
+	top: -1px;
 }
 .email {
 	top: -1px;
@@ -187,7 +192,7 @@ section {
 	}
 	img {
 		position: absolute;
-		z-index: 1;
+		z-index: 10;
 		opacity: 0.15;
 		height: 38px;
 		top: 11px;
