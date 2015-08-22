@@ -1,13 +1,14 @@
 section
-	form novalidate=''
+	form name='userForm' novalidate=''
 		textarea.inputs.mainTxt ng-model='user.message'
-			| Dzień dobry, Jestem zainteresowany współpracą z Panem. 
-			| &#13;&#10;Proszę o kontakt.
 		 
-		.inputBox
+		.inputBox 
 			img src='images/name.png' 
-			input.inputs.name type='text' placeholder='Twoje imię' 
-			
+			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-minlength='3' ng-class='{inputError : userForm.userName.$touched && userForm.userName.$invalid}' required=''
+			div ng-messages='userForm.userName.$error' ng-show="userForm.userName.$touched"
+				p.errorInfo ng-message='minlength' Proszę podać imię
+				p.errorInfo ng-message='required' Proszę podać imię
+
 		.inputBox
 			img src='images/phone.png' 
 			input.inputs type='text' placeholder='Twój numer telefonu' ng-model='user.phone'	

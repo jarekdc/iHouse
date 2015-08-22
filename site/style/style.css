@@ -137,39 +137,6 @@ table {
 	end of reset
 
 */
-@font-face {
-  font-family: 'EncodeSans-Light';
-  src: url('../font/EncodeSans-Light.ttf');
-}
-* {
-  box-sizing: border-box;
-  font-family: 'EncodeSans-Light', 'sans-serif';
-}
-body {
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-  background-repeat: no-repeat;
-  padding-bottom: 100px;
-  color: #191818;
-}
-h1 {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-}
-.wrap {
-  margin: 0 auto;
-  width: 300px;
-}
-.box {
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-}
-.contact {
-  margin: 54px 0 2px;
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-  color: #ffffff;
-}
 section {
   background-color: #ffffff;
   padding: 10px;
@@ -289,6 +256,49 @@ section {
 }
 .sendMsg span {
   text-decoration: underline;
+}
+.inputError {
+  background-color: #ffdbdb;
+}
+.errorInfo {
+  position: absolute;
+  top: 27px;
+  right: 0;
+  font-size: 12px;
+  padding: 2px;
+}
+@font-face {
+  font-family: 'EncodeSans-Light';
+  src: url('../font/EncodeSans-Light.ttf');
+}
+* {
+  box-sizing: border-box;
+  font-family: 'EncodeSans-Light', 'sans-serif';
+}
+body {
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  color: #191818;
+}
+h1 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+.wrap {
+  margin: 0 auto;
+  width: 300px;
+}
+.box {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.contact {
+  margin: 54px 0 2px;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  color: #ffffff;
 }
 .dataInfo {
   background-color: #ffffff;

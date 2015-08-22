@@ -1,0 +1,134 @@
+section {
+	background-color: @base;
+	padding: 10px;
+	margin-bottom: 2px;
+}
+.mainTxt {
+	resize: none;
+	height: 120px;
+	color: @mainTxt;
+	line-height: 20px;
+	padding: 7px;
+	border: 1px solid @border;
+	&:focus {
+		border: 1px solid @focused;
+		z-index: 1;
+	}	
+}
+.inputs {
+	width: 100%;
+	font-size: 14px;
+	position: relative;
+	cursor: pointer;	
+}
+.inputBox {
+	position: relative;
+	input {
+		height: 45px;
+		padding-left: 36px;
+		border: 1px solid @border;
+		&:focus {
+			border: 1px solid @focused;
+			z-index: 1;
+		}	
+	}
+	img {
+		height: 24px;
+		position: absolute;
+		top: 9px;
+		left: 6px;
+		z-index: 10;
+		opacity: 0.1;
+	}
+}
+.name {	
+	margin-bottom: 21px;
+	top: -1px;
+}
+.email {
+	top: -1px;
+	margin-bottom: 17px;
+}
+.agree {
+	font-size: 12px;
+	margin-bottom: 17px;
+	input {
+		width: 20px;
+		height: 20px;
+		top: 3px;
+		left: 0;
+		position: absolute;
+		visibility: hidden;
+	}
+	label {
+		padding-left: 28px;
+		display: inline-block;
+		position: relative;
+		line-height: normal;
+	}
+	a {
+		text-decoration: none;
+		position: relative;
+		padding: 0 3px;
+		color: @link;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0%;
+			height: 1px;
+			bottom: 0;
+			left: 50%;
+			background-color: @link;			
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			&:before {
+				width: 95%;
+				left: 3%;
+			}
+		}	
+	}
+}
+.checkboxImg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	cursor: pointer;
+}
+.sendMsg {	
+	button {
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 400;
+		border: none;
+		border-bottom: 1px solid @msgBorder;
+		box-shadow: 0px 2px 3px -3px rgba(0,0,0,1);
+		background-color: @msgButton;
+		color: @base;
+		height: 45px;		
+		width: 100%;
+		cursor: pointer;
+		&:hover {
+			background-color: @msgHover;
+		}
+	}
+	p {
+		padding: 7px 0 2px 11px; 
+		font-size: 12px;
+	}
+	span {
+		text-decoration: underline;
+	}
+}
+.inputError {
+	background-color: @error;
+}
+.errorInfo {
+	position: absolute;
+	top: 27px;
+	right: 0;
+	font-size: 12px;
+	padding: 2px;	
+}

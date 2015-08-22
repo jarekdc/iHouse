@@ -1,8 +1,16 @@
 <section>
-  <form novalidate="">
-    <textarea class="inputs mainTxt" ng-model="user.message">Dzień dobry, Jestem zainteresowany współpracą z Panem. &#13;&#10;Proszę o kontakt.</textarea>
+  <form name="userForm" novalidate="">
+    <textarea class="inputs mainTxt" ng-model="user.message"></textarea>
     <div class="inputBox">
-      <img src="images/name.png" /><input class="inputs name" placeholder="Twoje imię" type="text" />
+      <img src="images/name.png" /><input class="inputs name" name="userName" ng-class="{inputError : userForm.userName.$touched &amp;&amp; userForm.userName.$invalid}" ng-minlength="3" ng-model="user.name" placeholder="Twoje imię" required="" type="text" />
+      <div ng-messages="userForm.userName.$error" ng-show="userForm.userName.$touched">
+        <p class="errorInfo" ng-message="minlength">
+          Proszę podać imię
+        </p>
+        <p class="errorInfo" ng-message="required">
+          Proszę podać imię
+        </p>
+      </div>
     </div>
     <div class="inputBox">
       <img src="images/phone.png" /><input class="inputs" ng-model="user.phone" placeholder="Twój numer telefonu" type="text" />

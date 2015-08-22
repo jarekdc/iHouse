@@ -1,7 +1,11 @@
-var app = angular.module('iHouseApp', []);
+var app = angular.module('iHouseApp', ['ngMessages']);
 
 app.controller('contactCtrl', ['$scope', function($scope){
 	
+	$scope.user = {
+		message: 'Dzień dobry, Jestem zainteresowany współpracą z Panem. \nProszę o kontakt.'
+	};	
+
 	$scope.hide = true;
 	$scope.hideOption = 'czytaj więcej';
 	$scope.hideInfo = function(){
