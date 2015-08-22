@@ -1,32 +1,37 @@
 section
-	form name='userForm' novalidate=''
+	form name='userForm' novalidate='' ng-submit=' userForm.$valid && submit()'
 		textarea.inputs.mainTxt ng-model='user.message'
 		 
 		.inputBox 
 			img src='images/name.png' 
-			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-minlength='3' ng-class='{inputError : userForm.userName.$touched && userForm.userName.$invalid}' required=''
+			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-pattern='/^[a-zA-z][^0-9]{1,}$/' ng-class='{inputError : (userForm.userName.$touched || submitted) && userForm.userName.$invalid}' required=''
 			div ng-messages='userForm.userName.$error' ng-show="userForm.userName.$touched"
-				p.errorInfo ng-message='minlength' Proszę podać imię
-				p.errorInfo ng-message='required' Proszę podać imię
+				p.errorInfo ng-message='required, pattern' Proszę podać imię
 
 		.inputBox
 			img src='images/phone.png' 
-			input.inputs type='text' placeholder='Twój numer telefonu' ng-model='user.phone'	
+			input.inputs type='text' name='userPhone' placeholder='Twój numer telefonu' ng-model='user.phone' ng-pattern='/^[0-9-() ]{9,15}$/' ng-class='{inputError : (userForm.userPhone.$touched || submitted) && userForm.userPhone.$invalid}' required=''
+			div ng-messages='userForm.userPhone.$error' ng-show="userForm.userPhone.$touched"
+				p.errorInfo ng-message='pattern' Proszę wpisać poprawny numer
+				p.errorInfo ng-message='required' Proszę podać numer telefonu
 		
 		.inputBox
 			img src='images/at.png' 
-			input.inputs.email type='email' placeholder='Twój adres e-mail' ng-model='user.mail'
+			input.inputs.email type='email' name='userMail' placeholder='Twój adres e-mail' ng-model='user.mail' ng-class='{inputError : (userForm.userMail.$touched || submitted) && userForm.userMail.$invalid}' required=''
+			div ng-messages='userForm.userMail.$error' ng-show="userForm.userMail.$touched"
+				p.errorInfo ng-message='required' Proszę podać adres e-mail
+				p.errorInfo ng-message='email' Proszę podać poprawny adres e-mail
 
 		.agree
 			label 
-				input type='checkbox' ng-model='user.agree'
+				input type='checkbox' ng-model='user.agree' required=''
 				img.checkboxImg ng-src="{{user.agree ? 'images/checked.png' : 'images/checkbox.png'}}"
 				| Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
 				a href='regulamin' target='_blank' regulaminem
 				| .  
 
 		.sendMsg
-			button tpe='submit' Wyślij wiadomość		
+			button type='submit' Wyślij wiadomość		
 			p 
 				| *Agent deklaruje, że odpowie w ciągu 
 				span 2 godzin

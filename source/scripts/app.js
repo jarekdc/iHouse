@@ -4,6 +4,11 @@ app.controller('contactCtrl', ['$scope', function($scope){
 	
 	$scope.user = {
 		message: 'Dzień dobry, Jestem zainteresowany współpracą z Panem. \nProszę o kontakt.'
+	};
+
+	$scope.submit = function() {
+		$scope.submitted = true;
+		alert($scope.user.message);
 	};	
 
 	$scope.hide = true;
