@@ -14,7 +14,7 @@ html ng-app='iHouseApp'
 			.box.contact 
 				h1 Skontaktuj się z agentem 
 
-			contact-form
+			contact-form ng-hide='submitSuccess'
 			
 			article.dataInfo
 				p.hideInfo ng-class="hide ? 'hideInfo' : 'showInfo'" 
