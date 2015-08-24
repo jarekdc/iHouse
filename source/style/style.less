@@ -11,10 +11,13 @@
 	box-sizing: border-box;
 	font-family: 'EncodeSans-Light', 'sans-serif';
 }
+html {
+	min-height: 100%;
+}
 body {
 	background: linear-gradient(135deg, @gradA 0%, @gradB 100%);
 	background-repeat: no-repeat;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 	color: @contrast;
 }
 h1 {
@@ -25,6 +28,7 @@ h1 {
 .wrap {
 	margin: 0 auto;
 	width: 300px;
+	position: relative;
 }
 .box {
 	height: 60px;
@@ -101,4 +105,11 @@ h1 {
 }
 .clearfix {
 	clear: both;
+}
+
+.phoneBox {
+	position: absolute;
+	width: 100%;
+	top: 523px;
+	transition: all linear 0.5s;
 }

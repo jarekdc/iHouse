@@ -25,10 +25,11 @@ html ng-app='iHouseApp'
 					| [{{ hideOption }}]
 				.clearfix
 			
-			.box.phone
-				h1 Numer telefonu
-				img src='images/phone2.png'
+			.phoneBox
+				.box.phone
+					h1 Numer telefonu
+					img src='images/phone2.png'
 
-			.box.phoneNr
-				button ng-click='hideNr = !hideNr' ng-show='hideNr' Zobacz numer telefonu
-				h1 ng-hide='hideNr' ng-cloak='' +48 600 540 600		
+				.box.phoneNr
+					button ng-click='hideNr = !hideNr' ng-show='hideNr' Zobacz numer telefonu
+					h1 ng-hide='hideNr' ng-cloak='' +48 600 540 600		

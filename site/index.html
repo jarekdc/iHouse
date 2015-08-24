@@ -25,17 +25,19 @@
         <span ng-click="hideInfo()" ng-cloak="">[{{ hideOption }}]</span>
         <div class="clearfix"></div>
       </article>
-      <div class="box phone">
-        <h1>
-          Numer telefonu
-        </h1>
-        <img src="images/phone2.png" />
-      </div>
-      <div class="box phoneNr">
-        <button ng-click="hideNr = !hideNr" ng-show="hideNr">Zobacz numer telefonu</button>
-        <h1 ng-cloak="" ng-hide="hideNr">
-          +48 600 540 600		
-        </h1>
+      <div class="phoneBox">
+        <div class="box phone">
+          <h1>
+            Numer telefonu
+          </h1>
+          <img src="images/phone2.png" />
+        </div>
+        <div class="box phoneNr">
+          <button ng-click="hideNr = !hideNr" ng-show="hideNr">Zobacz numer telefonu</button>
+          <h1 ng-cloak="" ng-hide="hideNr">
+            +48 600 540 600		
+          </h1>
+        </div>
       </div>
     </div>
   </body>
