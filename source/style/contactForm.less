@@ -1,4 +1,9 @@
-form {
+.formBox {
+	position: relative;
+	min-height: 360px;
+	margin-bottom: 2px;	
+}
+.userForm {
 	background-color: @base;
 	padding: 10px;
 	margin-bottom: 2px;
@@ -70,28 +75,30 @@ textarea, input {
 		position: relative;
 		line-height: normal;
 	}
-	a {
-		text-decoration: none;
-		position: relative;
-		padding: 0 3px;
-		color: @link;
-		&:before {
-			content: "";
-			position: absolute;
-			width: 0%;
-			height: 1px;
-			bottom: 0;
-			left: 50%;
-			background-color: @link;			
-			transition: all 0.3s ease-in-out;
-		}
-		&:hover {
-			&:before {
-				width: 95%;
-				left: 3%;
-			}
-		}	
+	a {		
+	margin: 0 3px;
+	}	
+}
+.linkUnderline {
+	text-decoration: none;
+	position: relative;
+	color: @link;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0%;
+		height: 1px;
+		bottom: 0;
+		left: 50%;
+		background-color: @link;			
+		transition: all 0.3s ease-in-out;
 	}
+	&:hover {
+		&:before {
+			width: 100%;
+			left: 0%;
+		}
+	}	
 }
 .checkboxImg {
 	width: 20px;
@@ -138,4 +145,65 @@ textarea, input {
 	right: 0;
 	font-size: 10px;
 	padding: 2px;	
+}
+.success {
+	background-color: @base;
+	margin-bottom: 18px;
+	height: 360px;
+	padding: 29px 33px 0;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	img {
+		height: 80px;
+		width: 80px;
+		margin-bottom: 34px;
+	}
+	h2 {
+		color: @msgHover;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 400;
+		margin-bottom: 21px;
+	}
+	p {
+		font-size: 14px;
+		color: @successContrast;
+		line-height: 20px;
+
+	}
+	a {
+		color: @link;
+		text-decoration: none;
+	}
+	span {
+		text-decoration: underline;
+	}
+}
+
+.userForm.ng-hide-add {
+	animation: hide 1s;
+}
+
+.success.ng-hide-remove {
+	animation: show 1s;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

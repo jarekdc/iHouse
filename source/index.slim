@@ -7,6 +7,7 @@ html ng-app='iHouseApp'
 		link href='style/style.css' type='text/css' rel='stylesheet'
 		script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'
 		script src='https://code.angularjs.org/1.4.4/angular-messages.min.js'
+		script src='https://code.angularjs.org/1.4.4/angular-animate.min.js'
 		script src='scripts/app.js'
 
 	body ng-controller='contactCtrl'
@@ -15,20 +16,10 @@ html ng-app='iHouseApp'
 				h1
 					| {{ header }} 
 
-			contact-form ng-hide='submitSuccess'
-
-			.success ng-show='submitSuccess'
-				img src='images/success.png'
-				h2 Wiadomość została wysłana
-				p 
-					| Agent 
-					a href='profil' target='_blank' Sławomir Brzęczyszczykiewicz
-					|  odpowie na Twoje pytanie <br> w ciągu 
-					span 2 godzin
-					| .			
+			contact-form
 						
 			article.dataInfo ng-hide='submitSuccess'
-				p.hideInfo ng-class="hide ? 'hideInfo' : 'showInfo'" 
+				p.hideInfo ng-class="hideAdm ? 'hideInfo' : 'showInfo'" 
 					| Administratorem danych osobowych jest Lorem ipsum dolor sit amet, offendit forensibus qui at, in autem invidunt tincidunt cum. Usu eu sumo numquam noluisse. Cu eos discere aliquam debitis, et sea quando consul salutatus, id usu tota percipit probatus. Vis atomorum platonem ut, amet malorum perfecto has ut, saepe commodo qui et. Civibus placerat vix ad. 
 				span ng-click='hideInfo()' ng-cloak=''
 					| [{{ hideOption }}]

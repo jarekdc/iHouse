@@ -1,4 +1,4 @@
-var app = angular.module('iHouseApp', ['ngMessages']);
+var app = angular.module('iHouseApp', ['ngMessages', 'ngAnimate']);
 
 app.controller('contactCtrl', ['$scope', function($scope){
 	
@@ -11,14 +11,13 @@ app.controller('contactCtrl', ['$scope', function($scope){
 	$scope.submit = function() {
 		$scope.submitSuccess = true;
 		$scope.header = 'Wiadomość wysłana z sukcesem!';
-		alert($scope.user.message);
 	};	
 
-	$scope.hide = true;
+	$scope.hideAdm = true;
 	$scope.hideOption = 'czytaj więcej';
 	$scope.hideInfo = function(){
-		$scope.hide = !$scope.hide;
-		if($scope.hide) {
+		$scope.hideAdm = !$scope.hideAdm;
+		if($scope.hideAdm) {
 			$scope.hideOption = 'czytaj więcej';
 		} else {
 			$scope.hideOption = 'zwiń';

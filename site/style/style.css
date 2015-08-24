@@ -137,7 +137,12 @@ table {
 	end of reset
 
 */
-form {
+.formBox {
+  position: relative;
+  min-height: 360px;
+  margin-bottom: 2px;
+}
+.userForm {
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 2px;
@@ -212,12 +217,14 @@ input {
   line-height: normal;
 }
 .agree a {
+  margin: 0 3px;
+}
+.linkUnderline {
   text-decoration: none;
   position: relative;
-  padding: 0 3px;
   color: #3fa6e2;
 }
-.agree a:before {
+.linkUnderline:before {
   content: "";
   position: absolute;
   width: 0%;
@@ -227,9 +234,9 @@ input {
   background-color: #3fa6e2;
   transition: all 0.3s ease-in-out;
 }
-.agree a:hover:before {
-  width: 95%;
-  left: 3%;
+.linkUnderline:hover:before {
+  width: 100%;
+  left: 0%;
 }
 .checkboxImg {
   width: 20px;
@@ -275,6 +282,62 @@ input {
   font-size: 10px;
   padding: 2px;
 }
+.success {
+  background-color: #ffffff;
+  margin-bottom: 18px;
+  height: 360px;
+  padding: 29px 33px 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.success img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 34px;
+}
+.success h2 {
+  color: #69c139;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 21px;
+}
+.success p {
+  font-size: 14px;
+  color: #383838;
+  line-height: 20px;
+}
+.success a {
+  color: #3fa6e2;
+  text-decoration: none;
+}
+.success span {
+  text-decoration: underline;
+}
+.userForm.ng-hide-add {
+  animation: hide 1s;
+}
+.success.ng-hide-remove {
+  animation: show 1s;
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: 'EncodeSans-Light';
   src: url('../font/EncodeSans-Light.ttf');
@@ -312,7 +375,6 @@ h1 {
   background-color: #ffffff;
   font-size: 10px;
   padding: 10px 23px;
-  margin-bottom: 20px;
 }
 .dataInfo span {
   float: right;
@@ -333,7 +395,7 @@ h1 {
 .phone {
   background-color: #ffffff;
   position: relative;
-  margin-bottom: 2px;
+  margin: 20px 0 2px;
   text-align: left;
   padding-left: 90px;
 }
@@ -374,35 +436,4 @@ h1 {
 }
 .clearfix {
   clear: both;
-}
-.success {
-  background-color: #ffffff;
-  margin-bottom: 18px;
-  height: 360px;
-  padding: 29px 33px 0;
-  text-align: center;
-}
-.success img {
-  height: 80px;
-  width: 80px;
-  margin-bottom: 34px;
-}
-.success h2 {
-  color: #69c139;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 21px;
-}
-.success p {
-  font-size: 14px;
-  color: #383838;
-  line-height: 20px;
-}
-.success a {
-  color: #3fa6e2;
-  text-decoration: none;
-}
-.success span {
-  text-decoration: underline;
 }

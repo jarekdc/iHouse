@@ -7,6 +7,7 @@
     <link href="style/style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.4.4/angular-messages.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.4/angular-animate.min.js"></script>
     <script src="scripts/app.js"></script>
   </head>
   <body ng-controller="contactCtrl">
@@ -16,18 +17,9 @@
           {{ header }} 
         </h1>
       </div>
-      <contact-form ng-hide="submitSuccess"></contact-form>
-      <div class="success" ng-show="submitSuccess">
-        <img src="images/success.png" />
-        <h2>
-          Wiadomość została wysłana
-        </h2>
-        <p>
-          Agent <a href="profil" target="_blank">Sławomir Brzęczyszczykiewicz</a> odpowie na Twoje pytanie <br> w ciągu <span>2 godzin</span>.			
-        </p>
-      </div>
+      <contact-form></contact-form>
       <article class="dataInfo" ng-hide="submitSuccess">
-        <p class="hideInfo" ng-class="hide ? &#39;hideInfo&#39; : &#39;showInfo&#39;">
+        <p class="hideInfo" ng-class="hideAdm ? &#39;hideInfo&#39; : &#39;showInfo&#39;">
           Administratorem danych osobowych jest Lorem ipsum dolor sit amet, offendit forensibus qui at, in autem invidunt tincidunt cum. Usu eu sumo numquam noluisse. Cu eos discere aliquam debitis, et sea quando consul salutatus, id usu tota percipit probatus. Vis atomorum platonem ut, amet malorum perfecto has ut, saepe commodo qui et. Civibus placerat vix ad. 
         </p>
         <span ng-click="hideInfo()" ng-cloak="">[{{ hideOption }}]</span>
