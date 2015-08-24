@@ -142,7 +142,12 @@ form {
   padding: 10px;
   margin-bottom: 2px;
 }
+textarea,
+input {
+  outline: none;
+}
 .mainTxt {
+  display: block;
   resize: none;
   height: 120px;
   color: #1e1e1e;
@@ -369,4 +374,35 @@ h1 {
 }
 .clearfix {
   clear: both;
+}
+.success {
+  background-color: #ffffff;
+  margin-bottom: 18px;
+  height: 360px;
+  padding: 29px 33px 0;
+  text-align: center;
+}
+.success img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 34px;
+}
+.success h2 {
+  color: #69c139;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 21px;
+}
+.success p {
+  font-size: 14px;
+  color: #383838;
+  line-height: 20px;
+}
+.success a {
+  color: #3fa6e2;
+  text-decoration: none;
+}
+.success span {
+  text-decoration: underline;
 }

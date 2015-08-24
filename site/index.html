@@ -13,11 +13,20 @@
     <div class="wrap">
       <div class="box contact">
         <h1>
-          Skontaktuj się z agentem 
+          {{ header }} 
         </h1>
       </div>
       <contact-form ng-hide="submitSuccess"></contact-form>
-      <article class="dataInfo">
+      <div class="success" ng-show="submitSuccess">
+        <img src="images/success.png" />
+        <h2>
+          Wiadomość została wysłana
+        </h2>
+        <p>
+          Agent <a href="profil" target="_blank">Sławomir Brzęczyszczykiewicz</a> odpowie na Twoje pytanie <br> w ciągu <span>2 godzin</span>.			
+        </p>
+      </div>
+      <article class="dataInfo" ng-hide="submitSuccess">
         <p class="hideInfo" ng-class="hide ? &#39;hideInfo&#39; : &#39;showInfo&#39;">
           Administratorem danych osobowych jest Lorem ipsum dolor sit amet, offendit forensibus qui at, in autem invidunt tincidunt cum. Usu eu sumo numquam noluisse. Cu eos discere aliquam debitis, et sea quando consul salutatus, id usu tota percipit probatus. Vis atomorum platonem ut, amet malorum perfecto has ut, saepe commodo qui et. Civibus placerat vix ad. 
         </p>
