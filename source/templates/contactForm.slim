@@ -1,7 +1,7 @@
 .formBox
-	form.userForm name='userForm' novalidate='' ng-submit='submit()' ng-hide='submitSuccess'
+	form.userForm name='userForm' novalidate='' ng-submit='submitted = true; userForm.$valid && submit()' ng-hide='submitSuccess'
 		textarea.inputs.mainTxt ng-model='user.message'
-		 / submitted = true; userForm.$valid && 
+		
 		.inputBox 
 			img src='images/name.png' 
 			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-pattern='/^[a-zA-z][^0-9]{1,}$/' ng-class='{inputError : (userForm.userName.$touched || submitted) && userForm.userName.$invalid}' required=''
