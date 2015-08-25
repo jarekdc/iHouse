@@ -11,7 +11,6 @@ app.controller('contactCtrl', ['$scope', function($scope){
 	$scope.submit = function() {
 		$scope.submitSuccess = true;
 		$scope.header = 'Wiadomość wysłana z sukcesem!';
-		angular.element(document.querySelector('.phoneBox')).css('top', '420px');
 	};	
 
 }]);
