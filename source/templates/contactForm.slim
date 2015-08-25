@@ -4,7 +4,7 @@
 		
 		.inputBox 
 			img src='images/name.png' 
-			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-pattern='/^[a-zA-z][^0-9]{1,}$/' ng-class='{inputError : (userForm.userName.$touched || submitted) && userForm.userName.$invalid}' required=''
+			input.inputs.name type='text' name='userName' placeholder='Twoje imię' ng-model='user.name' ng-pattern='/^[^0-9]{1,}$/' ng-class='{inputError : (userForm.userName.$touched || submitted) && userForm.userName.$invalid}' required=''
 			div ng-messages='userForm.userName.$error' ng-show="userForm.userName.$touched"
 				p.errorInfo ng-message='required, pattern' Proszę podać imię
 

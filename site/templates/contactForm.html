@@ -2,7 +2,7 @@
   <form class="userForm" name="userForm" ng-hide="submitSuccess" ng-submit="submitted = true; userForm.$valid &amp;&amp; submit()" novalidate="">
     <textarea class="inputs mainTxt" ng-model="user.message"></textarea>
     <div class="inputBox">
-      <img src="images/name.png" /><input class="inputs name" name="userName" ng-class="{inputError : (userForm.userName.$touched || submitted) &amp;&amp; userForm.userName.$invalid}" ng-model="user.name" ng-pattern="/^[a-zA-z][^0-9]{1,}$/" placeholder="Twoje imię" required="" type="text" />
+      <img src="images/name.png" /><input class="inputs name" name="userName" ng-class="{inputError : (userForm.userName.$touched || submitted) &amp;&amp; userForm.userName.$invalid}" ng-model="user.name" ng-pattern="/^[^0-9]{1,}$/" placeholder="Twoje imię" required="" type="text" />
       <div ng-messages="userForm.userName.$error" ng-show="userForm.userName.$touched">
         <p class="errorInfo" ng-message="required, pattern">
           Proszę podać imię
