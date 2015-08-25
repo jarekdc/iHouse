@@ -14,18 +14,6 @@ app.controller('contactCtrl', ['$scope', function($scope){
 		angular.element(document.querySelector('.phoneBox')).css('top', '420px');
 	};	
 
-	$scope.hideAdm = true;
-	$scope.hideOption = 'czytaj więcej';
-	$scope.hideInfo = function(){
-		$scope.hideAdm = !$scope.hideAdm;
-		if($scope.hideAdm) {
-			$scope.hideOption = 'czytaj więcej';
-		} else {
-			$scope.hideOption = 'zwiń';
-		}
-	};	
-
-	$scope.hideNr = true;
 }]);
 
 app.directive('contactForm', function() {

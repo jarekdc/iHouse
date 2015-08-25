@@ -137,11 +137,6 @@ table {
 	end of reset
 
 */
-.formBox {
-  position: relative;
-  min-height: 360px;
-  margin-bottom: 2px;
-}
 .userForm {
   background-color: #ffffff;
   padding: 10px;
@@ -288,9 +283,6 @@ input {
   height: 360px;
   padding: 29px 33px 0;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .success img {
   height: 80px;
@@ -316,27 +308,37 @@ input {
 .success span {
   text-decoration: underline;
 }
-.userForm.ng-hide-add {
-  animation: hide 1s;
+/* Anim */
+.formBox {
+  max-height: 430px;
+  min-height: 360px;
+  overflow: hidden;
 }
-.success.ng-hide-remove {
-  animation: show 1s;
+.userForm {
+  transition: 0.2s linear all;
+  max-height: 999px;
+  opacity: 1;
 }
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.userForm.ng-hide {
+  max-height: 0;
+  opacity: 0;
 }
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.userForm.ng-hide-add,
+.userForm.ng-hide-remove {
+  display: block!important;
+}
+.success {
+  transition: 0.4s linear all;
+  max-height: 999px;
+  opacity: 1;
+}
+.success.ng-hide {
+  max-height: 0;
+  opacity: 0;
+}
+.success.ng-hide-remove,
+.success.ng-hide-remove-active {
+  display: block!important;
 }
 @font-face {
   font-family: 'EncodeSans-Light';
@@ -352,7 +354,7 @@ html {
 body {
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   background-repeat: no-repeat;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
   color: #191818;
 }
 h1 {
@@ -440,10 +442,4 @@ h1 {
 }
 .clearfix {
   clear: both;
-}
-.phoneBox {
-  position: absolute;
-  width: 100%;
-  top: 523px;
-  transition: all linear 0.5s;
 }

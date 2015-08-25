@@ -1,5 +1,5 @@
 <div class="formBox">
-  <form class="userForm" name="userForm" ng-hide="submitSuccess" ng-submit="submitted = true; userForm.$valid &amp;&amp; submit()" novalidate="">
+  <form class="userForm" name="userForm" ng-hide="submitSuccess" ng-submit="submit()" novalidate="">
     <textarea class="inputs mainTxt" ng-model="user.message"></textarea>
     <div class="inputBox">
       <img src="images/name.png" /><input class="inputs name" name="userName" ng-class="{inputError : (userForm.userName.$touched || submitted) &amp;&amp; userForm.userName.$invalid}" ng-model="user.name" ng-pattern="/^[a-zA-z][^0-9]{1,}$/" placeholder="Twoje imię" required="" type="text" />
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="inputBox">
-      <img src="images/phone.png" /><input class="inputs" name="userPhone" ng-class="{inputError : (userForm.userPhone.$touched || submitted) &amp;&amp; userForm.userPhone.$invalid}" ng-model="user.phone" ng-pattern="/^[0-9-() ]{9,15}$/" placeholder="Twój numer telefonu" required="" type="text" />
+      <img src="images/phone.png" /><input class="inputs" name="userPhone" ng-class="{inputError : (userForm.userPhone.$touched || submitted) &amp;&amp; userForm.userPhone.$invalid}" ng-model="user.phone" ng-pattern="/^[0-9-() +]{9,15}$/" placeholder="Twój numer telefonu" required="" type="text" />
       <div ng-messages="userForm.userPhone.$error" ng-show="userForm.userPhone.$touched">
         <p class="errorInfo" ng-message="pattern">
           Proszę wpisać poprawny numer
@@ -41,7 +41,7 @@
       </p>
     </div>
   </form>
-  <div class="success" ng-cloak="" ng-hide="!submitSuccess">
+  <div class="success" ng-hide="!submitSuccess">
     <img src="images/success.png" />
     <h2>
       Wiadomość została wysłana
