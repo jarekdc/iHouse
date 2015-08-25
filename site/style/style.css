@@ -318,9 +318,17 @@ input {
   transition: 0.2s linear all;
   max-height: 999px;
   opacity: 1;
+  transition-delay: 0.5s;
+}
+.userForm button span {
+  transition: 0.5s linear all;
+  text-decoration: none;
 }
 .userForm.ng-hide {
   max-height: 0;
+  opacity: 0;
+}
+.userForm.ng-hide button span {
   opacity: 0;
 }
 .userForm.ng-hide-add,
@@ -329,6 +337,7 @@ input {
 }
 .success {
   transition: 0.4s linear all;
+  transition-delay: 0.5s;
   max-height: 999px;
   opacity: 1;
 }
